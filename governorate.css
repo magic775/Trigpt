@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ecece7
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+}
+.image {
+    width: 100%;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden
+}
+p{
+    position: absolute;
+    font-size: 2rem;
+    top:330px ;
+}
+
+.star-rating label {
+    position: relative;
+    font-size: 3rem;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.2s;
+    float: right
+}
+.star-rating input {display: none}
+
+.star-rating label:hover,
+.star-rating label:hover~label {color: #ffd700}
+
+.star-rating input:checked~label {color: #ffd700}
+
+.icons{
+    position: absolute;
+    top:370px ;
+    right: 41%;
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.box1{
+    padding: 10px;
+    width: 90%;
+    margin: auto;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px #808080
+}
+.box2{
+    padding: 10px;
+    width: 90%;
+    margin: auto;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px #808080
+}
+.bgimage{
+    display: flex;
+    height: 20rem;
+    margin: auto;
+    gap: 1rem
+}
+.bgimage > div{
+    flex: 1;
+    border-radius: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100% ;
+    filter: grayscale(90%);
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4)
+}
+
+.bgimage > div:hover {flex: 5; filter: none}
+
+.names {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    font-size: 20px;
+}
+span{
+    padding: 1%;
+    backdrop-filter: blur(20px);
+    font-size: 20PX;
+    border-radius: 15px;
+    text-decoration: none
+}
+
+a{text-decoration: none;color: inherit}
+
+@media only screen and (max-width: 768px){
+    .icons{right: 10%;}
+
+    .bgimage > div{
+        background-size:100% ;
+        transition: all .8s cubic-bezier( .45, 1.4, .25, .4)
+    }
+    .bgimage{
+        flex-direction: column;
+    }
+}
+
