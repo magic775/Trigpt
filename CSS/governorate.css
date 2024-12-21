@@ -116,7 +116,7 @@ body div a:first-child{
     text-shadow: 0 1px 3px #5b3005;
 }
 
-body div a:last-child:not(section article div a){
+div a:last-child{
     background-color: #5b3005;
     border-radius: 150px 50px 50px 0;
     text-shadow: 0 1px 3px rgb(243,221, 188);
@@ -128,9 +128,7 @@ main {display: flex; flex-wrap: wrap; justify-content: center}
 
 .image {
     width: 100%;
-    height: 80vh;
-    /* height: fit-content; */
-    /* height: 350px; */
+    height: 540px;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -154,7 +152,7 @@ p {position: absolute; font-size: 2rem; top:520px}
 
 .star-rating input:checked~label {color: #ffd700}
 
-.icons{position: absolute; top:565px ; right: 36%}
+.icons{position: absolute; top:563px ; right: 36%}
 
 article {display: flex; flex-wrap: wrap; gap: 20px}
 
@@ -215,4 +213,17 @@ a{text-decoration: none;color: inherit}
 
 
 
-@media only screen and (max-width: 768px){.icons{right: 10%;}}
+@media only screen and (max-width: 768px) {
+    .icons {
+      right: 10%;
+    }
+  
+    .bgimage>div {
+      background-size: 100%;
+      transition: all .8s cubic-bezier(.45, 1.4, .25, .4)
+    }
+  
+    .bgimage {
+      flex-direction: column
+    }
+  }
