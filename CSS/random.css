@@ -272,7 +272,13 @@ fieldset input{
 }
 @media only screen and (max-width: 1050px) 
 {
-  section{width: 100%}
+  section{
+    padding: 0;
+    margin-top: 20vh;
+    width: 90%
+  }
+
+  nav{height: 4%}
 
   section article{width: 100%}
 }
